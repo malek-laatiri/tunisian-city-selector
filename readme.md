@@ -24,6 +24,9 @@ The data was scraped from Wikipedia and compiled into a structured dataset, whic
 3. Select a Tunisian city from the dropdown.
 4. The corresponding governorate options will be populated dynamically.
 
+## Demo
+![Tunisian City Selector in Action](demo.gif)
+
 ## File Structure
 ```
 ├── index.html  # Main HTML file
