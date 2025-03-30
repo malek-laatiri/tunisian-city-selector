@@ -4,7 +4,7 @@ This project provides a simple web interface to select Tunisian cities and displ
 
 ## Features
 - Fetches city-governorate data from a JSON file (`governorates.json`).
-- Updates the second dropdown dynamically based on the selected city.
+- Updates the second dropdown dynamically based on the selected city. 
 
 ## Data Source
 The data was scraped from Wikipedia and compiled into a structured dataset, which is available on Kaggle:
