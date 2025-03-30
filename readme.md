@@ -1,9 +1,9 @@
 # Tunisian City Selector
 
-This project provides a simple web interface to select Tunisian cities and display corresponding governments dynamically using jQuery and AJAX.
+This project provides a simple web interface to select Tunisian cities and display corresponding governorates dynamically using jQuery and AJAX.
 
 ## Features
-- Fetches city-government data from a JSON file (`governorates.json`).
+- Fetches city-governorate data from a JSON file (`governorates.json`).
 - Updates the second dropdown dynamically based on the selected city.
 
 ## Data Source
@@ -22,12 +22,12 @@ The data was scraped from Wikipedia and compiled into a structured dataset, whic
    ```
 2. Open `index.html` in a browser.
 3. Select a Tunisian city from the dropdown.
-4. The corresponding government options will be populated dynamically.
+4. The corresponding governorate options will be populated dynamically.
 
 ## File Structure
 ```
 ├── index.html  # Main HTML file
-├── governorates.json  # JSON file containing city-government data
+├── governorates.json  # JSON file containing city-governorate data
 ├── README.md  # Project documentation
 ```
 
