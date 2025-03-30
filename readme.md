@@ -3,7 +3,7 @@
 This project provides a simple web interface to select Tunisian cities and display corresponding governments dynamically using jQuery and AJAX.
 
 ## Features
-- Fetches city-government data from a JSON file (`Gouvernments.json`).
+- Fetches city-government data from a JSON file (`governorates.json`).
 - Updates the second dropdown dynamically based on the selected city.
 
 ## Data Source
@@ -27,12 +27,12 @@ The data was scraped from Wikipedia and compiled into a structured dataset, whic
 ## File Structure
 ```
 ├── index.html  # Main HTML file
-├── Gouvernments.json  # JSON file containing city-government data
+├── governorates.json  # JSON file containing city-government data
 ├── README.md  # Project documentation
 ```
 
 ## Notes
-- Ensure `Gouvernments.json` is correctly formatted and placed in the same directory.
+- Ensure `governorates.json` is correctly formatted and placed in the same directory.
 - jQuery is loaded via CDN, so an internet connection is required.
 
 ## License

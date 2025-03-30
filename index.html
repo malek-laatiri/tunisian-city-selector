@@ -42,28 +42,28 @@
         <label for="city">Choose a Tunisian City:</label>
         <select name="city" id="city" onchange="handle(document.getElementsByName('city'))">
         </select>
-        <label for="gouvernment">Choose a Gouvernment:</label>
-        <select name="gouvernment" id="gouvernment">
+        <label for="governorate">Choose a Governorate:</label>
+        <select name="governorate" id="governorate">
         </select>
     </div>
 </body>
 <script>
-    function handle(gouvernment) {
+    function handle(governorate) {
         $.ajax({
-            url: 'Gouvernments.json',
+            url: 'governorates.json',
             type: 'GET',
             dataType: 'json',
             success: function (code, statut) {
-                $("#gouvernment").empty();
-                for (let i of code[gouvernment[0].value]) {
-                    $("#gouvernment").append(`<option value="${i}">${i}</option>`);
+                $("#governorate").empty();
+                for (let i of code[governorate[0].value]) {
+                    $("#governorate").append(`<option value="${i}">${i}</option>`);
                 }
             }
         });
     }
     $(document).ready(function () {
         $.ajax({
-            url: 'Gouvernments.json',
+            url: 'governorates.json',
             type: 'GET',
             dataType: 'json',
             success: function (code, statut) {
