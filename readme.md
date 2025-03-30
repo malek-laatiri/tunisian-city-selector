@@ -18,7 +18,7 @@ The data was scraped from Wikipedia and compiled into a structured dataset, whic
 ## How to Use
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/tunisian-city-selector.git
+   git clone https://github.com/malek-laatiri/tunisian-city-selector
    ```
 2. Open `index.html` in a browser.
 3. Select a Tunisian city from the dropdown.
