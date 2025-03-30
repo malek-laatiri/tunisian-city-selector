@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose Tunisian City</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label for="city">Choose a Tunisian City:</label>
+        <select name="city" id="city" onchange="handle(document.getElementsByName('city'))">
+        </select>
+        <label for="gouvernment">Choose a Gouvernment:</label>
+        <select name="gouvernment" id="gouvernment">
+        </select>
+    </div>
+</body>
+<script>
+    function handle(gouvernment) {
+        $.ajax({
+            url: 'Gouvernments.json',
+            type: 'GET',
+            dataType: 'json',
+            success: function (code, statut) {
+                $("#gouvernment").empty();
+                for (let i of code[gouvernment[0].value]) {
+                    $("#gouvernment").append(`<option value="${i}">${i}</option>`);
+                }
+            }
+        });
+    }
+    $(document).ready(function () {
+        $.ajax({
+            url: 'Gouvernments.json',
+            type: 'GET',
+            dataType: 'json',
+            success: function (code, statut) {
+                for (let i in code) {
+                    $("#city").append(`<option value="${i}">${i}</option>`);
+                }
+            }
+        });
+    });
+</script>
+</html>
